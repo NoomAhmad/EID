@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>كروت معايدة</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="css/Card.css">
+</head>
+
+<body onload="download()">
+
+<img id="card" width="auto" height="auto" src="img/Card.jpeg" alt="EID CARD" style="display:none;">
+
+<canvas id="myCanvas" width="1024px" height="1020px" style="border:1px solid #d3d3d3;">
+</canvas>
+
+
+
+
+<script>
+
+   window.onload = function () {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var img = document.getElementById("card");
+    ctx.drawImage(img, 0, 0);
+    ctx.font = "60pt ae_Arab";
+    ctx.fillStyle = "white";
+    var txt = document.getElementById("myCanvas").innerHTML = localStorage.getItem("Yname");
+    ctx.fillText(txt, 400, 780);
+	};
+	
+</script>
+
+
+</body>
+</html>
