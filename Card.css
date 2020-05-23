@@ -1,0 +1,39 @@
+*{
+box-sizing:border-box;
+}
+
+@font-face {
+   font-family: ae_Arab;
+   src: url(font/ae_Arab.ttf);
+}
+
+
+body{
+  color:white;
+  font-family:ae_Arab;
+  color:#066E84;
+  background-image:url('img/ground.png');
+}
+
+
+#myCanvas{
+	margin-left:180px; 
+}
+
+
+
+@media screen and  (max-width: 768px) {
+	 
+#myCanvas{
+  width: 400px;
+  height: 350px;
+  background-image:url(img/card.png);
+  color:white;
+  margin-left:50px;
+ }
+#card{
+  width: 380px;
+  height: 320px;
+  }
+
+}
