@@ -4,7 +4,7 @@ box-sizing:border-box;
 
 @font-face {
    font-family: ae_Arab;
-   src: url(font/ae_Arab.ttf);
+   src: url(ae_Arab.ttf);
 }
 
 
@@ -12,7 +12,6 @@ body{
   color:white;
   font-family:ae_Arab;
   color:#066E84;
-  background-image:url('img/ground.png');
 }
 
 
