@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>كروت </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<div class="header">
+</div>
+<div class="info">
+<h3>كل عام و أنتم بخير</h3>
+  <form action="Card.html"  method="post">
+    <label for="fname">الاسم</label>
+    <input type="text" id="myName" name="fname" >
+ <button id = "print" onClick="Print()">طباعة</button>
+
+</form>
+</div>
+
+
+
+<script>
+function Print() {
+  var name = document.getElementById("myName").value;
+  localStorage.setItem("Yname",name);
+  return false;
+}
+</script>
+</body>
+</html>
