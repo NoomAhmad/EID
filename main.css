@@ -5,19 +5,16 @@
     
 @font-face {
    font-family: ae_Arab;
-   src: url(font/ae_Arab.ttf);
+   src: url(ae_Arab.ttf);
  }
  
 body {
- 
-   background: url("../img/ground.png") repeat;
-   background-size: cover;
    font-family:ae_Arab;
    font-size:28px;      
 }
 
 .header{
-	height:130px;
+  height:130px;
 }
 
 .info {
@@ -30,7 +27,7 @@ body {
 
 @media screen and  (max-width: 768px) {
  .header{
-		}
+	}
  .info {
       height: 100%;
      } 
