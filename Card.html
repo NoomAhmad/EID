@@ -18,14 +18,14 @@
 
     var image  = document.getElementById("source");
     var canvas = document.getElementById("canvas");
-    
+   
     var context = canvas.getContext("2d");
-
     context.drawImage(image, 0, 0);
+	
     var txt = document.getElementById("canvas").innerHTML = localStorage.getItem("Yname");
     context.fillStyle = "white";
     context.font = "50pt ae_Arab";
-    context.fillText(txt, 400, 780);
+    context.fillText(txt, 430, 780);
    
    
   function download(){
