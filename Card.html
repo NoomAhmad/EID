@@ -1,31 +1,45 @@
+<!DOCTYPE html>
 <html>
+<head>
+<title>كرت معايدة</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="Card.css">
+</head>
+
 <body onload="download()">
 
-<p>Image to use:</p>
-<img id="scream" src="back.jpg" alt="The Scream" width="220" height="277">
+<img id="card" width="auto" height="auto" src="Card.jpeg" alt="EID CARD" style="display:none;">
 
-<p>Canvas:</p>
-<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML5 canvas tag.</canvas>
+<canvas id="myCanvas" width="1024px" height="1020px" style="border:1px solid #d3d3d3;">
+</canvas>
+
+<div class="icon-bar">
+  <a href="https:/www.facebook.com/share?url=https://eid-card.netlify.app/card.html?fname=" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="https://twitter.com/share?url=https://eid-card.netlify.app/card.html?fname=txt " class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="https://plus.google.com/share?url=https://eid-card.netlify.app/card.html?fname=" class="google"><i class="fa fa-google"></i></a> 
+  <a href= "https://www.linkedin.com/share?url=https://eid-card.netlify.app/card.html?fname=" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="whatsapp://send?text=https://eid-card.netlify.app/card.html?fname=txt" class="whatsapp"><i class="fa fa-whatsapp"></i></a> 
+</div>
+
+
 
 <script>
 
-
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
-  var img = document.getElementById("scream");
-  ctx.drawImage(img, 90, 130, 50, 60, 10, 10, 50, 60);
-
-  
-function download(){
-  var canvas = document.getElementById("myCanvas");
-  image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-  var link = document.createElement('a');
-  link.download = "Card.png";
-  link.href = image;
-  link.click();
-}
+   window.onload = function () {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var img = document.getElementById("card");
+    ctx.drawImage(img, 0, 0);
+    ctx.font = "60pt ae_Arab";
+    ctx.fillStyle = "white";
+    var txt = document.getElementById("myCanvas").innerHTML = localStorage.getItem("Yname");
+    ctx.fillText(txt, 400, 780);
+	};
+	
 </script>
+
 
 </body>
 </html>
