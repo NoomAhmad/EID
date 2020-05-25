@@ -22,9 +22,9 @@
     var context = canvas.getContext("2d");
 
     context.drawImage(image, 0, 0);
-    context.font = "60pt ae_Arab";
     var txt = document.getElementById("canvas").innerHTML = localStorage.getItem("Yname");
     context.fillStyle = "white";
+    context.font = "50pt ae_Arab";
     context.fillText(txt, 400, 780);
    
    
